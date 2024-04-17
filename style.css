@@ -1,15 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
-    /* Header */
-    --header-text: 24px #f9faf8;
-    /* Hero */
-    --hero-bg: #1f2937;
-    --hero-text-header: 48px 900 #f9faf8;
-    --hero-text-desc: 18px #f9faf8;
-    /* Mission */
-    --mission-text-header: 36px 900 #1f2937;
-    /* Quote */
-    --quote-bg: #e5e7eb;
-    --quote-text: 36px light italic #1f2937;
-    /* Cta */
-    --cta: #3882f6;
+    /* colors */
+    --clr-bg: #1f2937;
+    --clr-bg-2: #fff;
+    --clr-bg-quote: #e5e7eb;
+    --clr-text: #f9faf8;
+    --clr-text-2: #1f2937;
+    --clr-cta: #3882f6;
+
+    /* Typhography */
+    --fs-logo: 24px;
+    --fw-logo: bold;
+    --fs-nav: 18px;
+    --fs-hero-header: 48px;
+    --fw-hero-header: 900;
+    --fs-hero-desc: 18px;
+    --fs-mission-header: 36px;
+    --fw-mission-header: 900;
+    --fs-quote:36px;
+    --fw-quote: thin;
+    --fstyle-quote: italic;
+}
+
+/* Globals */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    scroll-behavior:smooth;
+    scroll-snap-align: center;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+a:hover,a:focus {
+    color: var(--clr-cta);
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.logo {
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-logo);
+}
+nav a {
+    margin-left: 20px;
+}
+
+
+/* Hero */
+.hero {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    padding: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh
+}
+.hero__header {
+    font-weight: var(--fw-hero-header);
+    font-size: var(--fs-hero-header);
+}
+.hero__left {
+    max-width: 600px;
+    flex: 1 1 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+.hero__btn {
+    background-color: var(--clr-cta);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: var(--clr-text);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero__btn:hover {
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+}
+
+.hero img {
+    flex: 1 1 0;
+    width: 400px;
+    height: auto;
+    max-width: 600px;
+}
+
+.mission {
+    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    row-gap: 50px;
+}
+.cards {
+    margin-top: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.mission__header {
+    font-size: var(--fs-mission-header);
+}
+.mission__card {
+    width: 200px;
+}
+.card__img {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--clr-cta);
+    border-radius: 5px;
+    
+}
+
+/* Quote */
+.quote {
+    background-color: var(--clr-bg-quote);
+    min-height: 50vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+blockquote {
+    font-size: var(--fs-quote);
+    font-style: var(--fstyle-quote);
+    font-weight: 300;
+    max-width: 600px;
+}
+.quote-src {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.join {
+    min-height: 50vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.cta {
+    background-color: var(--clr-cta);
+    color: var(--clr-text);
+
+    padding: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 40px;
+    row-gap: 40px;
+}
+.cta__btn {
+    background-color: var(--clr-cta);
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: var(--clr-text);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cta__btn:hover {
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--clr-bg);
+    padding: 30px;
+    color: var(--clr-text);
+    text-align: center;
+}
+
+/* Small device fix hero layout */
+@media all and (max-width: 900px) {
+    .hero {
+        flex-flow: row wrap-reverse;
+    }
 }
