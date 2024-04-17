@@ -1,0 +1,15 @@
+:root {
+    /* Header */
+    --header-text: 24px #f9faf8;
+    /* Hero */
+    --hero-bg: #1f2937;
+    --hero-text-header: 48px 900 #f9faf8;
+    --hero-text-desc: 18px #f9faf8;
+    /* Mission */
+    --mission-text-header: 36px 900 #1f2937;
+    /* Quote */
+    --quote-bg: #e5e7eb;
+    --quote-text: 36px light italic #1f2937;
+    /* Cta */
+    --cta: #3882f6;
+}
