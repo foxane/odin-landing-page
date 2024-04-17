@@ -211,7 +211,7 @@ blockquote {
 
 footer {
     background-color: var(--clr-bg);
-    padding: 30px;
+    padding: 10px;
     color: var(--clr-text);
     text-align: center;
 }
